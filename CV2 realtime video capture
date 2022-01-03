@@ -1,0 +1,9 @@
+import cv2 as cv
+capture = cv.VideoCapture(0)
+while True:
+    isTrue, myframe = capture.read()
+    cv.imshow('Video', myframe)
+    if cv.waitKey(20) & 0xFF == ord('d'):
+        break
+capture.release()
+cv.destroyAllWindows()
